@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>探索响应式设计的极限 | QuietWindow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans selection:bg-teal-100 selection:text-teal-900">
+
+    <!-- 导航栏 -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-tight text-teal-600">
+                <i class="fa-solid fa-feather-pointed mr-2"></i>QuietWindow
+            </a>
+            
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+                <a href="index.html" class="text-gray-500 hover:text-teal-600 transition">首页</a>
+                <a href="about.html" class="text-gray-500 hover:text-teal-600 transition">关于</a>
+                <a href="#" class="text-gray-500 hover:text-teal-600 transition">分类</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-gray-500 text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-6 py-4 border-t border-gray-100 space-y-4">
+            <a href="index.html" class="block text-gray-500">首页</a>
+            <a href="about.html" class="block text-gray-500">关于</a>
+            <a href="#" class="block text-gray-500">分类</a>
+        </div>
+    </nav>
+
+    <!-- 文章头部 -->
+    <header class="pt-40 pb-16 bg-white border-b border-gray-100 text-center">
+        <div class="max-w-3xl mx-auto px-6 fade-in-up">
+            <div class="flex justify-center items-center gap-3 text-sm font-semibold text-teal-600 mb-6 uppercase tracking-wider">
+                <span>技术笔记</span>
+                <span class="text-gray-300">•</span>
+                <span class="text-gray-400 font-normal">2026年3月20日</span>
+                <span class="text-gray-300">•</span>
+                <span class="text-gray-400 font-normal">5分钟阅读时间</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-8 leading-tight">探索响应式设计的极限</h1>
+            <div class="flex items-center justify-center gap-4">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Lucky" alt="Author" class="w-10 h-10 rounded-full bg-teal-50 border border-teal-100">
+                <span class="text-sm font-bold text-gray-900">earkyAutoMode</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 文章正文 -->
+    <main class="max-w-3xl mx-auto px-6 py-16">
+        <article class="prose prose-teal lg:prose-xl max-w-none text-gray-600 leading-relaxed space-y-8 fade-in">
+            <p class="text-xl font-medium text-gray-900 italic">
+                “在一个多设备并存的时代，响应式设计早已不是新鲜话题，但如何更优雅地处理断点、图片自适应以及在各种极端比例下的展示效果？”
+            </p>
+            
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1200" alt="Article Header" class="w-full h-[400px] object-cover rounded-3xl shadow-xl my-12">
+
+            <h2 class="text-3xl font-bold text-gray-900 pt-8 border-t border-gray-50">从流式布局说起</h2>
+            <p>
+                响应式设计的核心在于灵活性。我们不应该仅仅针对几个“标准”的屏幕尺寸进行设计，而是应该让内容流式地适应任何宽度。这意味着我们必须摒弃传统的固定像素宽度，转而拥抱百分比、`vh/vw` 以及 `flexbox` 与 `grid` 等现代布局工具。
+            </p>
+
+            <h2 class="text-3xl font-bold text-gray-900 pt-8 border-t border-gray-50">容器查询的魅力</h2>
+            <p>
+                虽然媒体查询（Media Queries）是基础，但容器查询（Container Queries）正在改变我们的思维方式。它允许组件根据其父容器的宽度来调整自身样式，而不是整个视口的宽度。这对于构建可重用的模块化 UI 至关重要。
+            </p>
+
+            <div class="bg-teal-50 p-8 rounded-3xl border border-teal-100 italic font-medium text-teal-800">
+                “一个好的响应式网站，不应该让人觉得它在某个尺寸下是被‘挤进去’的，而是觉得它生来就是为了这个尺寸。”
+            </div>
+
+            <h2 class="text-3xl font-bold text-gray-900 pt-8 border-t border-gray-50">结论</h2>
+            <p>
+                响应式设计不仅仅是代码实现，更是一种设计哲学。它要求我们在不同的环境下依然保持信息的完整性与交互的流畅性。
+            </p>
+
+            <!-- 社交分享 -->
+            <div class="flex items-center gap-6 pt-16 mt-16 border-t border-gray-100">
+                <span class="text-sm font-bold uppercase tracking-widest text-gray-400">分享这篇文章</span>
+                <div class="flex gap-4">
+                    <a href="#" class="text-gray-400 hover:text-teal-600 transition text-xl"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-teal-600 transition text-xl"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-teal-600 transition text-xl"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- 相关文章推荐 -->
+    <section class="bg-gray-100 py-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <h3 class="text-2xl font-bold mb-8">下一篇推荐</h3>
+            <a href="post2.html" class="group block bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-200">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <span class="text-xs font-semibold text-teal-600 uppercase tracking-wider mb-2 block">生活感悟</span>
+                        <h4 class="text-2xl font-bold group-hover:text-teal-600 transition">大自然是最好的色彩师</h4>
+                    </div>
+                    <i class="fa-solid fa-arrow-right-long text-2xl text-gray-300 group-hover:text-teal-600 group-hover:translate-x-2 transition-all"></i>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-white border-t border-gray-100 py-16">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="text-2xl font-bold tracking-tight text-teal-600 mb-8">
+                QuietWindow
+            </div>
+            <p class="text-gray-400 text-sm mb-8">© 2026 earkyAutoMode. Built with passion and static HTML.</p>
+            <div class="flex justify-center space-x-8 text-gray-400 text-sm">
+                <a href="index.html" class="hover:text-teal-600 transition">首页</a>
+                <a href="about.html" class="hover:text-teal-600 transition">关于</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
