@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我 | QuietWindow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans selection:bg-teal-100 selection:text-teal-900">
+
+    <!-- 导航栏 -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-tight text-teal-600">
+                <i class="fa-solid fa-feather-pointed mr-2"></i>QuietWindow
+            </a>
+            
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+                <a href="index.html" class="text-gray-500 hover:text-teal-600 transition">首页</a>
+                <a href="about.html" class="text-teal-600 hover:text-teal-700 transition">关于</a>
+                <a href="#" class="text-gray-500 hover:text-teal-600 transition">分类</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-gray-500 text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-6 py-4 border-t border-gray-100 space-y-4">
+            <a href="index.html" class="block text-gray-500">首页</a>
+            <a href="about.html" class="block text-teal-600 font-medium">关于</a>
+            <a href="#" class="block text-gray-500">分类</a>
+        </div>
+    </nav>
+
+    <!-- 关于我主体 -->
+    <main class="pt-40 pb-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-16 items-start">
+            
+            <!-- 个人照片 -->
+            <div class="md:col-span-4 sticky top-40 fade-in">
+                <div class="relative group">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Lucky" alt="Profile" class="w-full rounded-[40px] shadow-2xl bg-teal-50 border-4 border-white transform transition duration-500 group-hover:rotate-2 group-hover:scale-105">
+                    <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-teal-500 rounded-full flex items-center justify-center text-white text-3xl shadow-lg animate-pulse">
+                        👋
+                    </div>
+                </div>
+                <div class="mt-12 space-y-4">
+                    <p class="text-sm font-bold text-gray-400 uppercase tracking-widest">联系我</p>
+                    <a href="#" class="flex items-center gap-4 text-gray-600 hover:text-teal-600 transition">
+                        <i class="fa-solid fa-envelope w-5"></i> 496519969@qq.com
+                    </a>
+                    <a href="#" class="flex items-center gap-4 text-gray-600 hover:text-teal-600 transition">
+                        <i class="fa-brands fa-github w-5"></i> @earkyAutoMode
+                    </a>
+                </div>
+            </div>
+
+            <!-- 详细介绍 -->
+            <div class="md:col-span-8 space-y-12 fade-in-up">
+                <section>
+                    <h2 class="text-5xl font-extrabold mb-8 tracking-tight">你好，我是 <span class="text-teal-600 underline underline-offset-8">earkyAutoMode</span></h2>
+                    <p class="text-xl text-gray-600 leading-relaxed font-medium">
+                        一名热爱生活、痴迷设计、并以此为乐的前端开发者。我相信好的设计能够简化复杂的世界，好的代码能够承载深远的思想。
+                    </p>
+                </section>
+
+                <section class="space-y-6">
+                    <h3 class="text-2xl font-bold flex items-center gap-4">
+                        <i class="fa-solid fa-rocket text-teal-500"></i> 我在做什么？
+                    </h3>
+                    <p class="text-lg text-gray-500 leading-relaxed">
+                        目前我专注于构建直观、优雅且高性能的 Web 应用程序。在日常工作中，我不仅仅是在编写 HTML、CSS 和 JavaScript，我更是在创造一种体验。我也非常喜欢开源，在这个数字社区中贡献和汲取灵感。
+                    </p>
+                </section>
+
+                <section class="space-y-6">
+                    <h3 class="text-2xl font-bold flex items-center gap-4">
+                        <i class="fa-solid fa-heart text-teal-500"></i> 兴趣爱好
+                    </h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-6 bg-gray-50 rounded-3xl border border-gray-100 hover:bg-white hover:shadow-xl transition-all cursor-default">
+                            <i class="fa-solid fa-camera text-2xl text-teal-500 mb-4"></i>
+                            <h4 class="font-bold mb-2">摄影</h4>
+                            <p class="text-sm text-gray-400">用镜头捕捉光影的律动与城市的瞬间。</p>
+                        </div>
+                        <div class="p-6 bg-gray-50 rounded-3xl border border-gray-100 hover:bg-white hover:shadow-xl transition-all cursor-default">
+                            <i class="fa-solid fa-mug-hot text-2xl text-teal-500 mb-4"></i>
+                            <h4 class="font-bold mb-2">咖啡</h4>
+                            <p class="text-sm text-gray-400">对手冲咖啡的极致追求，是清晨的必修课。</p>
+                        </div>
+                        <div class="p-6 bg-gray-50 rounded-3xl border border-gray-100 hover:bg-white hover:shadow-xl transition-all cursor-default">
+                            <i class="fa-solid fa-bicycle text-2xl text-teal-500 mb-4"></i>
+                            <h4 class="font-bold mb-2">骑行</h4>
+                            <p class="text-sm text-gray-400">享受自由呼吸，感受路面与踏板的链接。</p>
+                        </div>
+                        <div class="p-6 bg-gray-50 rounded-3xl border border-gray-100 hover:bg-white hover:shadow-xl transition-all cursor-default">
+                            <i class="fa-solid fa-code text-2xl text-teal-500 mb-4"></i>
+                            <h4 class="font-bold mb-2">编程</h4>
+                            <p class="text-sm text-gray-400">用逻辑构建世界，在算法中寻找优雅。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="bg-teal-50 p-10 rounded-[40px] border border-teal-100 relative overflow-hidden">
+                    <i class="fa-solid fa-quote-left absolute top-4 left-4 text-teal-100 text-9xl -z-10"></i>
+                    <h3 class="text-2xl font-bold text-teal-900 mb-4">我的座右铭</h3>
+                    <p class="text-xl text-teal-700 font-serif italic">
+                        “不忘初心，方得始终。在代码的数字世界里，也请保留一份生活的温润。”
+                    </p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-100 border-t border-gray-200 py-16">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="text-2xl font-bold tracking-tight text-teal-600 mb-8">
+                QuietWindow
+            </div>
+            <p class="text-gray-400 text-sm mb-8">© 2026 earkyAutoMode. Built with passion and static HTML.</p>
+            <div class="flex justify-center space-x-8 text-gray-400 text-sm">
+                <a href="index.html" class="hover:text-teal-600 transition">首页</a>
+                <a href="about.html" class="hover:text-teal-600 transition">关于</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

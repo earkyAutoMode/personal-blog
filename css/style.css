@@ -1,0 +1,94 @@
+/* 全局变量与基础设置 */
+:root {
+  --teal-500: #14b8a6;
+  --teal-600: #0d9488;
+}
+
+/* 自定义字体平滑 */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 卡片浮动效果 */
+.post-card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.post-card:hover {
+  transform: translateY(-8px);
+}
+
+/* 进场动画 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* 为后续元素提供动画延迟基准 */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+
+/* 响应式排版微调 */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* 文章正文样式增强 */
+.prose p {
+  margin-bottom: 2rem;
+  line-height: 1.8;
+  color: #4b5563;
+}
+
+.prose h2 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  color: #111827;
+}
